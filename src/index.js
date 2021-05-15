@@ -99,7 +99,7 @@ const makeTransaction =  transaction => {
     setTimeout(() => {
       const canProcess = Math.random() > 0.3;
 
-      canProcess ? resolve(logSuccess(transaction.id, delay)) : reject(logError(transaction.id))
+      canProcess ? logSuccess(transaction.id, delay) : logError(transaction.id)
 
     }, delay);
 
